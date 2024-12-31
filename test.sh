@@ -5,3 +5,5 @@ echo "Present working directory : $(pwd)"
 
 echo "List of files in current directory : $(ls)"
 
+echo "List of files in current directory : $(ls -l)"
+
