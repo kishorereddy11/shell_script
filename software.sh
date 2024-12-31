@@ -1,4 +1,6 @@
 #create shell script to check software installed or not
+#!/bin/bash
+
 if [ -z $1]
 then
 echo "Please provide software name"
