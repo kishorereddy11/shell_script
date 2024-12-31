@@ -1,5 +1,5 @@
 #create shell script to check software installed or not
-if [-z $1]
+if [ -z $1]
 then
 echo "Please provide software name"
 echo "Usage: $0 <software name>"
