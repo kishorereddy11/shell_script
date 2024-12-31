@@ -1,13 +1,13 @@
-#check softwares installed or not
-#!/bin/bash
-echo "Checking for software"
-if [ -z $1 ]
+#create shell script to check software installed or not
+if [-z $1]
 then
 echo "Please provide software name"
+echo "Usage: $0 <software name>"
 else
-if [ -z $(which $1) ]
+if [ $(dpkg-query -W -f='${Status}' $1 2>/dev/null | grep -c "ok installed") -eq 0 ]
 then
-echo "Software not installed"
+echo "Software is not installed"
 else
-echo "Software installed"
+echo "Software is installed"
+fi
 fi
