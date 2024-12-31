@@ -4,5 +4,10 @@ echo "Checking for software"
 if [ -z $1 ]
 then
 echo "Please provide software name"
-exit 1
+else
+if [ -z $(which $1) ]
+then
+echo "Software not installed"
+else
+echo "Software installed"
 fi
