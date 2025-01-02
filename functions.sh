@@ -9,13 +9,22 @@ if [ $USER_ID -eq 0 ]
     exit 1
 fi
 
+dnf install mysql -y
+
 if [$? -eq 0 ]
 then
-dnf install mysql -y
+echo "Installing MYSQL ... Success"
+else
+echo "Installing MYSQL .... Failed"
+exit 1
 fi
 
+dnf install git -y
 if [$? -eq 0 ] 
 then
-dnf install git -y
+echo "Installing git .... Success"
+else
+echo "Installing git .... failed"
+exit 1
 fi 
 #for package in 
