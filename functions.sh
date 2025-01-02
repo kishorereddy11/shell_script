@@ -1,9 +1,7 @@
 #!bin/bash
+USER_ID=$(id -u)
 
-read -p "Enter username : $username" 
-read -sp "Enter password: $password" 
-
-if(id -eq 0){
+if($USER_ID -eq 0){
     echo "cuurent user is root"
 }
 #for package in 
