@@ -1,6 +1,9 @@
 #!/bin/bash
 #Loops in shell script
-echo "Test"
+echo "Enter the user and password"
+read -p "Enter the username: " username
+read -sp "Enter the password: " password
+
 for package in apache2 mysql git
 do
 dnf list installed $package &> /dev/null
