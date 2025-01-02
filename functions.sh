@@ -9,7 +9,13 @@ if [ $USER_ID -eq 0 ]
     exit 1
 fi
 
+if [$? -eq 0 ]
+then
 dnf install mysql -y
+fi
 
-dnf install git -y 
+if [$? -eq 0 ] 
+then
+dnf install git -y
+fi 
 #for package in 
