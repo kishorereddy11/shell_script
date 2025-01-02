@@ -1,4 +1,4 @@
 #!bin/bash
 
-read -p "Enter user name :" $username
-read -sp "Enter password: " $password
+read -p "Enter username : $username" 
+read -sp "Enter password: $password" 
