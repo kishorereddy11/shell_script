@@ -1,3 +1,9 @@
 #!/bin/bash
 name="Hi DevOps"
-echo "==== ${name} ==== $name"
+a="a"
+b="b"
+c="c"
+echo "==== $name"
+echo "${a}"
+echo "$(b)"
+echo "$c"
