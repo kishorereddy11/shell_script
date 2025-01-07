@@ -1,3 +1,3 @@
 #!/bin/bash
-name="test"
+name="Hi DevOps"
 echo "$(name) ==== ${name} ==== $name"
