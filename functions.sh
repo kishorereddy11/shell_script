@@ -1,6 +1,15 @@
 #!bin/bash
 USER_ID=$(id -u)
 
+VALIDATE(){
+
+    if [ $1 -eq 0 ]
+    then 
+    echo "$2 .... success"
+    else
+    echo "$2  .... failed"
+}
+
 if [ $USER_ID -eq 0 ]
     then 
     echo "cuurent user is root"
@@ -9,22 +18,13 @@ if [ $USER_ID -eq 0 ]
     exit 1
 fi
 
+echo "Installing mysql"
 dnf install mysql -y
 
-if [ $? -eq 0 ]
-then
-echo "Installing MYSQL ... Success"
-else
-echo "Installing MYSQL .... Failed"
-exit 1
-fi
+VALIDATE $? "INSTALLING MYSQL"
 
+echo "Installing git"
 dnf install git -y
-if [ $? -eq 0 ] 
-then
-echo "Installing git .... Success"
-else
-echo "Installing git .... failed"
-exit 1
-fi 
+
+VALIDATE $? "INSTALLING GIT" 
 #for package in 
