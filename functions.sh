@@ -8,6 +8,7 @@ VALIDATE(){
     echo "$2 .... success"
     else
     echo "$2  .... failed"
+    fi
 }
 
 if [ $USER_ID -eq 0 ]
@@ -18,10 +19,12 @@ if [ $USER_ID -eq 0 ]
     exit 1
 fi
 
+echo "Installing mysql"
 dnf install mysql -y
 
 VALIDATE $? "INSTALLING MYSQL"
 
+echo "Installing git"
 dnf install git -y
 
 VALIDATE $? "INSTALLING GIT" 
