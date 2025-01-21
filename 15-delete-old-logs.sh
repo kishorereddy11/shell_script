@@ -73,5 +73,5 @@ while read -r file
 
 do
 echo "Delete file: $file"
-
-done < $FILES_TO_DELETE
+rm -rf $file
+done <<< $FILES_TO_DELETE
