@@ -6,7 +6,7 @@ G="\e[32m"
 Y="\e[33m"
 NF="\e[0m"
 
-if [ ! -d "app-logs" ]
+if [ ! -d "/home/ec2-user/app-logs" ]
 then
 cd "/home/ec2-user"
 mkdir app-logs
