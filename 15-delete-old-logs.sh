@@ -6,7 +6,16 @@ G="\e[32m"
 Y="\e[33m"
 NF="\e[0m"
 
+if [ ! -d "app-logs" ]
+then
+cd "/home/ec2-user"
+mkdir app-logs
 SOURCE_DIR="/home/ec2-user/app-logs"
+echo "created app logs folder"
+else
+echo "already create folder"
+fi
+
 
 LOGS_FOLDER="/var/log/shellscript-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1 )
